@@ -4,32 +4,38 @@ class Song:
       self.__title = title
       self.__next_song = None
 
-
-  # TODO: Create a getter method for the title attribute, called get_title
+  #Getter method for title attribute
   def get_title(self):
+    return self.__title
     pass
   
   
-  # TODO: Create a setter method for the next_song attribute, called set_title. Make sure titles are type cased to strings and are Title Cased.
+  #Setter method 
   def set_title(self, title):
+    
+    self.__title = str(title).title()
     pass
 
 
-  # TODO: Create a getter method for the next_song attribute, called get_next_song
+  #Getter method for next_song attribute
   def get_next_song(self):
+    return self.__next_song
     pass
 
 
-  # TODO: Create a setter method for the next_song attribute, called set_next_song
+  # Setter method for next_song attribute
   def set_next_song(self, next_title):
+    self.__next_song = next_title
     pass
 
 
-  # TODO: Using the __str___ dunder method, return a string of the song title.
+  #String of song title
   def __str__(self):
+    return self.get_title()
     pass
 
 
-  # TODO: Using the __repr__ dunder method, return a string formatted as the following:'Song Title -> Next Song Title'
+  # String with appropriate formatting 
   def __repr__(self):
+    return f"{self.get_title()} -> {self.get_next_song()}"
     pass
